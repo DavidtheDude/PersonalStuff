@@ -9,11 +9,12 @@
 #define	GAMECLOCK_H
 
 class Gameclock {                       ///< Tracks in game time remaining
+private:
         int timeleft;
-    public:
-        void downtick(int);
-        int currtime();
-        void initialize();
+public:
+    void downtick(int);
+    int currtime();
+    void initialize();
 };
 
 #endif	/* GAMECLOCK_H */

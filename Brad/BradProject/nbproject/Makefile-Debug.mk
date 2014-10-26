@@ -35,15 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/classes.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/AllDisClass.o \
 	${OBJECTDIR}/Dice.o \
-	${OBJECTDIR}/nouns.o \
-	${OBJECTDIR}/verbs.o \
-	${OBJECTDIR}/GameClock.o \
-	${OBJECTDIR}/functions.o \
-	${OBJECTDIR}/cmdtree.o
+	${OBJECTDIR}/GameClock.o
 
 
 # C Compiler Flags
@@ -70,50 +64,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bradproject.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/bradproject ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/classes.o: classes.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/classes.o classes.cpp
-
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/AllDisClass.o: AllDisClass.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/AllDisClass.o AllDisClass.cpp
 
 ${OBJECTDIR}/Dice.o: Dice.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Dice.o Dice.cpp
 
-${OBJECTDIR}/nouns.o: nouns.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/nouns.o nouns.cpp
-
-${OBJECTDIR}/verbs.o: verbs.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/verbs.o verbs.cpp
-
 ${OBJECTDIR}/GameClock.o: GameClock.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/GameClock.o GameClock.cpp
-
-${OBJECTDIR}/functions.o: functions.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/functions.o functions.cpp
-
-${OBJECTDIR}/cmdtree.o: cmdtree.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/cmdtree.o cmdtree.cpp
 
 # Subprojects
 .build-subprojects:

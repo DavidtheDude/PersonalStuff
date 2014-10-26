@@ -10,7 +10,7 @@
 #include <time.h>
 
 void Gameclock::downtick(int loss) {    ///< To decrement the time counter.
-    timeleft = timeleft - loss;
+    timeleft-=loss;
 }
 
 int Gameclock::currtime() {             ///< Displays time remaining.
